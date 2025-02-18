@@ -1,0 +1,24 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #373737;
+    color: #c1dbe3;
+}
+#drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    cursor: pointer;
+}
+#drop-area.highlight {
+    border-color: green;
+}
+#preview {
+    margin-top: 10px;
+    max-width: 100%;
+    display: none;
+    margin: 10px auto;
+    display: block;
+} */

@@ -1,0 +1,10 @@
+runs/
+venv/
+templates/og.html
+templates/og2.html
+__pycache__
+model/__pycache__
+
+training/
+model/train.py
+
