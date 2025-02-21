@@ -65,7 +65,7 @@ def upload_image():
 
 if __name__ == "__main__":
     clear_folder()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8000)
 
 
 #TODO: Need to add a scheduler to clean /static/predict/ and /static/uploads/ folders every week or so. We can connect these folder data to a database. 

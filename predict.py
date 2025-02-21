@@ -7,4 +7,4 @@ def predict(filepath):
 
 # if __name__ == '__main__':
 #     predict("./static/uploads/tr-pi_1393.jpg")
-    
+     
