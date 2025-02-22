@@ -1,24 +1,56 @@
-/* body {
+/* color palette */
+:root {
+    --light-gray: #E0E0E0;
+    --medium-gray: #B0B0B0;
+    --dark-blue: #003049;
+    --light-blue: #BDE0FE;
+    --text-dark: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-    background-color: #373737;
-    color: #c1dbe3;
 }
-#drop-area {
-    border: 2px dashed #ccc;
+
+/* navigation bar */
+.navbar {
+    background-color: var(--dark-blue);
+    padding: 10px 20px;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* upload box */
+.upload-box {
+    border: 2px dashed var(--dark-blue);
     padding: 20px;
-    width: 300px;
-    margin: auto;
-    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--light-blue);
 }
-#drop-area.highlight {
-    border-color: green;
+
+/* upload button */
+.btn-primary {
+    background-color: var(--light-gray);
+    border: none;
+    color: black;
 }
-#preview {
-    margin-top: 10px;
-    max-width: 100%;
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+/* loading circle */
+.spinner-border {
     display: none;
-    margin: 10px auto;
-    display: block;
-} */
+}
+
+/* prediction result */
+#prediction-container {
+    display: none;
+}

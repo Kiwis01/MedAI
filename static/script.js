@@ -11,19 +11,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         formData.append("file", fileInput.files[0]);
 
+        document.querySelector(".spinner-border").style.display = "inline-block";  
+
         fetch("/upload", {
             method: "POST",
             body: formData,
         })
         .then(response => response.json())
         .then(data => {
+            document.querySelector(".spinner-border").style.display = "none";  
+
             if (data.error) {
                 alert(data.error);
             } else {
                 document.getElementById("prediction-image").src = data.predicted;
+                document.getElementById("prediction-image").style.display = "block";
                 document.getElementById("prediction-container").style.display = "block";
             }
         })
-        .catch(error => console.error("Error:", error));
+        .catch(error => {
+            document.querySelector(".spinner-border").style.display = "none";  
+            console.error("Error:", error);
+        });
     });
 });

@@ -50,7 +50,7 @@ def upload_image():
         file.save(filepath)
 
         # Run prediction
-        prediction = predict.predict(filepath)
+        prediction, prediction_label = predict.predict(filepath)
 
         # YOLO saves results in a directory like static/predict/result2
         prediction_dir = Path(prediction[0].save_dir) / filename
@@ -65,7 +65,7 @@ def upload_image():
 
 if __name__ == "__main__":
     clear_folder()
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=8008)
 
 
 #TODO: Need to add a scheduler to clean /static/predict/ and /static/uploads/ folders every week or so. We can connect these folder data to a database. 
