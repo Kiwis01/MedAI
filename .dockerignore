@@ -10,3 +10,5 @@ python/
 venv/
 .gitignore
 .slugignore
+luislugo.pem
+python.zip

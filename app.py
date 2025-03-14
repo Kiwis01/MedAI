@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify, send_from_directory
 import os
 from werkzeug.utils import secure_filename
-import predict
-from pathlib import Path
 import shutil
-import os
+from api import pred, draw_box
+import cv2
 
 app = Flask(__name__)
 
@@ -50,22 +49,20 @@ def upload_image():
         file.save(filepath)
 
         # Run prediction
-        prediction, prediction_label = predict.predict(filepath)
+        prediction = pred(filepath)        
+        image, f_name = draw_box(prediction, filepath)
+        pred_filepath = os.path.join(app.config['PREDICTION_FOLDER'], f_name)
 
-        # YOLO saves results in a directory like static/predict/result2
-        prediction_dir = Path(prediction[0].save_dir) / filename
-        if prediction_dir.exists(): 
-            prediction_path = prediction_dir.as_posix()  # Convert to forward slashes
-            return jsonify({'predicted': prediction_path})
-        else:
-            return jsonify({'error': 'Prediction image not found'})
+        # Save or display the image
+        cv2.imwrite(pred_filepath, image)  # Saves the image
+        return jsonify({'predicted': pred_filepath})
         
-    return jsonify({'error': 'Allowed image types are - png, jpg, jpeg, gif'})
+    return jsonify({'error': 'Please try again, Allowed image types are - png and jpg'})
 
 
 if __name__ == "__main__":
     clear_folder()
-    app.run(host="0.0.0.0", port=8008)
+    app.run(host="0.0.0.0", port=8011)
 
 
 #TODO: Need to add a scheduler to clean /static/predict/ and /static/uploads/ folders every week or so. We can connect these folder data to a database. 
