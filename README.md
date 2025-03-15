@@ -1,16 +1,14 @@
 # ⛑️ MedAI
 
+This Application is running Flask and Python --version = Python >= 3.8
 https://medai-509c7d6aeb86.herokuapp.com
 
-# Usage
-
-Run the following command to start the app:
-```python app.py```
-
 ## Setup
-
 Install the required dependencies:
-```pip install -r requirements.txt```
+
+```
+pip install -qr requirements.txt 
+```
 
 ## Useful Information
 - `"static/script.js"` handles the files (input image and output predictions).
