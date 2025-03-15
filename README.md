@@ -1,10 +1,10 @@
 # Tumor Detector with Bounding Boxes
 
+https://medai-509c7d6aeb86.herokuapp.com
+
 Run the following command to start the app:
 ```python app.py```
-
-
-This will redirect you to `http://127.0.0.1:5000` in the browser to visualize the app.
+This will redirect you to `http://127.0.0.1:8000` in the browser to visualize the app.
 
 ## Setup
 
@@ -13,11 +13,8 @@ Install the required dependencies:
 
 
 ## Useful Information
-
-- `"training/"` is not needed in the app; it's just for experimentation and trying different datasets, etc.
 - `"static/script.js"` handles the files (input image and output predictions).
 - `"static/predict"` and `"static/uploads"` handle predicted images and uploaded images, respectively.
-- `"predict.py"` can run independently. Some code is commented out if you want to try local predictions (without running Flask).
 
 ## Todo
 
