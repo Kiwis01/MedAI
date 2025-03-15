@@ -2,15 +2,15 @@
 
 https://medai-509c7d6aeb86.herokuapp.com
 
+# Usage
+
 Run the following command to start the app:
 ```python app.py```
-This will redirect you to `http://127.0.0.1:8000` in the browser to visualize the app.
 
 ## Setup
 
 Install the required dependencies:
 ```pip install -r requirements.txt```
-
 
 ## Useful Information
 - `"static/script.js"` handles the files (input image and output predictions).
