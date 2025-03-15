@@ -1,4 +1,4 @@
-# Tumor Detector with Bounding Boxes
+# ⛑️ MedAI
 
 https://medai-509c7d6aeb86.herokuapp.com
 
