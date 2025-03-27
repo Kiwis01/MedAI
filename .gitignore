@@ -5,3 +5,4 @@ model/
 Dockerfile
 predict.py
 *.log
+.env
