@@ -14,10 +14,4 @@ pip install -qr requirements.txt
 - `"static/script.js"` handles the files (input image and output predictions).
 - `"static/predict"` and `"static/uploads"` handle predicted images and uploaded images, respectively.
 
-## Todo
 
-- Connect to database.
-- Add sign-in metrics (ideally connected to the database so users can save previous predictions).
-- Once deployed, add a refresher to delete unwanted predictions saved on the server.
-- Improve the GUI.
-- Add confidence threshold.
